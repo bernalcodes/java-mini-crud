@@ -76,6 +76,12 @@ public class GestorProductosController {
 		} 
 	}
 
+	// Agregar ProductoVO a Mapa
+	public void addProducto(ProductoVO producto) {
+		this.productosMap.put(producto.getId(), producto);
+		saveDB();
+	}
+
 	// Modificacion de ProductVO
 	public void updateProducto(ProductoVO producto) {
 		this.productosMap.put(producto.getId(), producto);

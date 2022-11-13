@@ -266,7 +266,7 @@ public class GestorProductosView extends JFrame implements ActionListener {
 				Float.parseFloat(txtPrecio.getText()),
 				cbProveedor.getSelectedItem().toString()
 			);
-			controller.getMapaProductos().put(producto.getId(), producto);
+			controller.addProducto(producto);
 			loadProductsOnTable();
 			clearForm();
 		} catch (Exception e) {

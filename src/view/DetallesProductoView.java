@@ -194,7 +194,7 @@ public class DetallesProductoView extends JFrame implements ActionListener {
 			updateProducto.setPrecio(Float.parseFloat(txtPrecio.getText()));
 			updateProducto.setProveedor(cbProveedor.getSelectedItem().toString());
 
-			controller.getMapaProductos().put(this.producto.getId(), updateProducto);
+			controller.updateProducto(updateProducto);
 			
 			this.dispose();
 			parentView.loadProductsOnTable();
@@ -210,7 +210,7 @@ public class DetallesProductoView extends JFrame implements ActionListener {
 
 	// Delete productVO from map
 	private void deleteProduct() {
-		ProductoVO deleteProducto = controller.getMapaProductos().remove(this.producto.getId());
+		ProductoVO deleteProducto = controller.deleteProducto(this.producto);
 		JOptionPane.showMessageDialog(
 			null,
 			String.format("Producto con ID [%s] eliminado", deleteProducto.getId().toString()),

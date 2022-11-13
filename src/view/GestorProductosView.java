@@ -286,7 +286,7 @@ public class GestorProductosView extends JFrame implements ActionListener {
 				String[] options = {"Aceptar", "Cancelar"};
 				int usrOpt = JOptionPane.showOptionDialog(
 					null, 
-					"Reporte generado con datos previamente almacenados",
+					"¿Desea generar el reporte con los datos previamente almacenados?",
 					"Aviso - Reporte",
 					JOptionPane.NO_OPTION,
 					JOptionPane.WARNING_MESSAGE,

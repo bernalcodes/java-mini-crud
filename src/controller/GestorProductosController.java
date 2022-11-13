@@ -76,6 +76,19 @@ public class GestorProductosController {
 		} 
 	}
 
+	// Modificacion de ProductVO
+	public void updateProducto(ProductoVO producto) {
+		this.productosMap.put(producto.getId(), producto);
+		saveDB();
+	}
+
+	// Borrado de ProductVO
+	public ProductoVO deleteProducto(ProductoVO producto) {
+		ProductoVO deletedProducto = this.productosMap.remove(producto.getId());
+		saveDB();
+		return deletedProducto;
+	}
+
 	// Creacion de reporte csv
 	public void generarReporte() throws IOException {
 		try {
